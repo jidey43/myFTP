@@ -1,0 +1,18 @@
+
+#include "client.h"
+
+t_match_fptr		*init_db()
+{
+  t_match_fptr		*db;
+  
+  if((db = malloc(sizeof(t_match_fptr) * 8)) == NULL)
+    return (NULL);
+}
+
+int		execute(t_client * client, char **command)
+{
+  assert(client != NULL);
+  assert(command != NULL);
+
+  return (0);
+}

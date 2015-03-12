@@ -1,0 +1,10 @@
+
+#include "client.h"
+
+int		put(t_client *client, char **command)
+{
+  assert(client != NULL);
+  assert(command != NULL);
+  puts("Upload !");
+  return (0);
+}
