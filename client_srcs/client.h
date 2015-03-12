@@ -28,6 +28,8 @@
 # define READY 7
 # define ABORT 8
 
+# define LAST_ONE 9
+
 typedef struct s_client t_client;
 
 typedef struct		s_match_fptr

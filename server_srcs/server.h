@@ -26,6 +26,7 @@
 # define READY 7
 # define ABORT 8
 
+# define LAST_ONE 9
 typedef struct		s_packet
 {
   int			type;
