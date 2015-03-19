@@ -9,7 +9,7 @@ int		receive_file(int client_fd, int file_fd)
     {
       if (read(client_fd, &packet, sizeof(packet)) == -1)
 	return (-1);
-      if (write(file_fd, packet.data, strlen(packet.data)) == -1)
+      if (write(file_fd, packet.data, packet.size) == -1)
 	return (-1);
       if (packet.type == LAST_ONE)
 	{
@@ -25,7 +25,6 @@ int		receive_file(int client_fd, int file_fd)
 	return (-1);
       bzero(&packet, sizeof(packet));
     }
-  close(file_fd);
   return (0);
 }
 
@@ -42,7 +41,7 @@ int		accept_file(int client_fd, int status)
 int		put(int client_fd, t_packet packet)
 {
   int		file_fd;
-  
+
   printf("Downloading %s\n", packet.data);
   if ((file_fd = open(packet.data, O_CREAT | O_RDWR,  00666)) == -1)
     {
@@ -53,5 +52,6 @@ int		put(int client_fd, t_packet packet)
     return (-1);
   if (receive_file(client_fd, file_fd) == -1)
     return (-1);
+  close(file_fd);
   return (0);
 }

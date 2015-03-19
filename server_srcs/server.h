@@ -13,6 +13,7 @@
 # include <assert.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <dirent.h>
 
 # define CMD_USER 0
 # define CMD_LS 1
@@ -22,14 +23,18 @@
 # define CMD_PWD 5
 
 # define DATA_PUT 6
+# define DATA_LS 7
+# define DATA_PWD 8
 
-# define READY 7
-# define ABORT 8
+# define READY 9
+# define ABORT 10
 
-# define LAST_ONE 9
+# define LAST_ONE 11
+
 typedef struct		s_packet
 {
   int			type;
+  int			size;
   char			data[1024];
 }			t_packet;
 
@@ -44,5 +49,12 @@ int			init_server(int ac, char **av, t_server *server);
 int			loop(t_server *server);
 int			treat(int client_fd, t_packet packet);
 int			put(int client_fd, t_packet packet);
+int			get(int client_fd, t_packet packet);
+int			ls(int client_fd, t_packet packet);
+int			pwd(int client_fd, t_packet packet);
+int			cd(int client_fd, t_packet packet);
+int			user(int client_fd, t_packet packet);
+
+typedef int		(*funcptr)(int client_fd, t_packet packet);
 
 #endif /* !_SERVER_H_ */

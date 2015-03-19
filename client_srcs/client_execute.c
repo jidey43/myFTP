@@ -1,46 +1,6 @@
 
 #include "client.h"
 
-int		user(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("Login !");
-  return (0);
-}
-
-int		ls(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("List !");
-  return (0);
-}
-
-int		cd(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("Change directory !");
-  return (0);
-}
-
-int		get(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("Download !");
-  return (0);
-}
-
-int		pwd(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("Print Wordking Directory !");
-  return (0);
-}
-
 int		quit(t_client *client, char **command)
 {
   assert(client != NULL);

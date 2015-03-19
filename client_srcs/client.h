@@ -24,11 +24,17 @@
 # define CMD_PWD 5
 
 # define DATA_PUT 6
+# define DATA_LS 7
+# define DATA_PWD 8
 
-# define READY 7
-# define ABORT 8
+# define READY 9
+# define ABORT 10
 
-# define LAST_ONE 9
+# define LAST_ONE 11
+
+# define AUTHENT_OK 12
+# define AUTHENT_KO 13
+# define AUTHENT_PASS 14
 
 typedef struct s_client t_client;
 
@@ -50,6 +56,7 @@ typedef struct		s_client
 typedef struct		s_packet
 {
   int		type;
+  int		size;
   char		data[1024];
 }			t_packet;
 

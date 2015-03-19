@@ -2,7 +2,7 @@ CC =		gcc
 
 RM =		rm -f
 
-CFLAGS =	-Wall -Werror -Wextra -g3
+CFLAGS =	-Wall -Werror -Wextra
 
 LDFLAGS =	
 
@@ -10,14 +10,24 @@ SRC_SRV =	./server_srcs/server.c \
 		./server_srcs/server_init.c \
 		./server_srcs/server_core.c \
 		./server_srcs/server_treat.c \
-		./server_srcs/server_put.c
+		./server_srcs/server_put.c \
+		./server_srcs/server_get.c \
+		./server_srcs/server_ls.c \
+		./server_srcs/server_pwd.c \
+		./server_srcs/server_cd.c \
+		./server_srcs/server_user.c
 
 SRC_CLI = 	./client_srcs/client.c \
 		./client_srcs/client_init.c \
 		./client_srcs/client_core.c \
 		./client_srcs/client_command.c \
 		./client_srcs/client_execute.c \
-		./client_srcs/client_put.c
+		./client_srcs/client_put.c \
+		./client_srcs/client_get.c \
+		./client_srcs/client_ls.c \
+		./client_srcs/client_pwd.c \
+		./client_srcs/client_cd.c \
+		./client_srcs/client_user.c
 
 OBJ_SRV =	$(SRC_SRV:.c=.o)
 
