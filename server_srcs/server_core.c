@@ -1,3 +1,12 @@
+/*
+** server_core.c for ftp in /home/roman/Documents/dev/PSU_2014_myftp/server_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:30:04 2015 Roman
+** Last update Thu Mar 19 14:03:42 2015 grout_r
+*/
 
 #include "server.h"
 
@@ -7,12 +16,11 @@ int                     handle_client(int client_fd)
 
   while (42)
     {
-      puts("Connection etablished, waiting for request ...");
       read(client_fd, &packet, sizeof(packet));
-      printf("%d\n", packet.type);
+      if (packet.type == CMD_QUIT)
+	return (0);
       if (treat(client_fd, packet) == -1)
 	return (-1);
-      //return (0);
     }
 }
 

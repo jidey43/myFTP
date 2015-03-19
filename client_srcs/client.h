@@ -1,3 +1,12 @@
+/*
+** client.h for ftp in /home/roman/Documents/dev/PSU_2014_myftp/client_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:41:27 2015 grout_r
+** Last update Thu Mar 19 13:55:19 2015 grout_r
+*/
 
 #ifndef _CLIENT_H_
 # define _CLIENT_H_
@@ -22,19 +31,16 @@
 # define CMD_GET 3
 # define CMD_PUT 4
 # define CMD_PWD 5
+# define CMD_QUIT 6
 
-# define DATA_PUT 6
-# define DATA_LS 7
-# define DATA_PWD 8
+# define DATA_PUT 7
+# define DATA_LS 8
+# define DATA_PWD 9
 
-# define READY 9
-# define ABORT 10
+# define READY 10
+# define ABORT 11
 
-# define LAST_ONE 11
-
-# define AUTHENT_OK 12
-# define AUTHENT_KO 13
-# define AUTHENT_PASS 14
+# define LAST_ONE 12
 
 typedef struct s_client t_client;
 

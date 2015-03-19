@@ -1,3 +1,13 @@
+/*
+** server.h for ftp in /home/roman/Documents/dev/PSU_2014_myftp/server_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:29:44 2015 Roman
+** Last update Thu Mar 19 13:56:23 2015 grout_r
+*/
+
 #ifndef _SERVER_H_
 # define _SERVER_H_
 
@@ -21,15 +31,16 @@
 # define CMD_GET 3
 # define CMD_PUT 4
 # define CMD_PWD 5
+# define CMD_QUIT 6
 
-# define DATA_PUT 6
-# define DATA_LS 7
-# define DATA_PWD 8
+# define DATA_PUT 7
+# define DATA_LS 8
+# define DATA_PWD 9
 
-# define READY 9
-# define ABORT 10
+# define READY 10
+# define ABORT 11
 
-# define LAST_ONE 11
+# define LAST_ONE 12
 
 typedef struct		s_packet
 {

@@ -1,3 +1,12 @@
+/*
+** server_ls.c for ftp in /home/roman/Documents/dev/PSU_2014_myftp/server_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:29:09 2015 Roman
+** Last update Thu Mar 19 13:39:32 2015 grout_r
+*/
 
 #include "server.h"
 

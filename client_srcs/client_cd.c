@@ -1,3 +1,12 @@
+/*
+** client_cd.c for ftp in /home/roman/Documents/dev/PSU_2014_myftp/client_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:27:46 2015 grout_r
+** Last update Thu Mar 19 13:41:53 2015 grout_r
+*/
 
 #include "client.h"
 

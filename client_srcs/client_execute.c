@@ -1,13 +1,14 @@
+/*
+** client_execute.c for ftp in /home/roman/Documents/dev/PSU_2014_myftp/client_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:41:37 2015 grout_r
+** Last update Thu Mar 19 14:00:06 2015 grout_r
+*/
 
 #include "client.h"
-
-int		quit(t_client *client, char **command)
-{
-  assert(client != NULL);
-  assert(command != NULL);
-  puts("Quit !");
-  return (-1);
-}
 
 int		execute(t_client * client, char **command)
 {

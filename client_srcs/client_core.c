@@ -1,3 +1,12 @@
+/*
+** client_core.c for ftp in /home/roman/Documents/dev/PSU_2014_myftp/client_srcs
+** 
+** Made by grout_r
+** Login   <roman@epitech.net>
+** 
+** Started on  Thu Mar 19 13:41:41 2015 grout_r
+** Last update Thu Mar 19 13:41:42 2015 grout_r
+*/
 
 #include "client.h"
 
@@ -35,7 +44,8 @@ int		loop(t_client *client)
       while (c != '\n')
 	{
 	  str = malloc(sizeof(char) * 1024);
-	  scanf(" %s", str);
+	  if (scanf("%s", str) == EOF)
+	    return (-1);
 	  command = add_word(command, str);
 	  c = getchar();
 	}
